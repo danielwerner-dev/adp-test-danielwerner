@@ -64,6 +64,8 @@ the interview.adpeai.com API can respond with a 429 (Too Many requests).
 My approach:
 
 - I would implement a rate-limiting mechanism in the application to prevent overwhelming the API with too many requests. This can be done by keeping track of the number of requests made to the API within a certain time window and delaying or rejecting new requests if the limit is exceeded. We can choose between Leaky Bucket and Token Bucket, both have pros and cons
+- Rate-limiting also helps to prevent brute force attacks
+- Implementing retry-after header to specifies a time to wait before sending another request.
 - Thus, I'll choose TOKEN BUCKET because memory usage is minimal and if the bucket is full, tokens are discarded.
 - I'm not choosing LEAK BUCKET because may result in slowness for users (affecting application UI/UX), because requests are being throttled
 - Additionally, I would implement a retry mechanism to handle the 429 errors, helping to prevent the application from overwhelming the API with too many requests in a short period of time.
