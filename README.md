@@ -61,7 +61,7 @@ high number of submitted task requests, and occasionally, on demanding situation
 the interview.adpeai.com API can respond with a 429 (Too Many requests).
 
 
-My approach:
+# My approach:
 
 - I would implement a rate-limiting mechanism in the application to prevent overwhelming the API with too many requests. This can be done by keeping track of the number of requests made to the API within a certain time window and delaying or rejecting new requests if the limit is exceeded. We can choose between Leaky Bucket and Token Bucket, both have pros and cons
 - Rate-limiting also helps to prevent brute force attacks
