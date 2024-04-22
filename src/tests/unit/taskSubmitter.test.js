@@ -9,6 +9,7 @@ const mockedSubmitResult = {
 };
 
 test('Task Submit API is called', async () => {
+  // @ts-ignore
   require('axios').setMockResult({ url: submitTaskUrl, result: mockedSubmitResult });
   expect(await submitter.submit()).toStrictEqual(mockedSubmitResult.data);
 });
