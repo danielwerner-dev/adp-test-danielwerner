@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { submitTaskUrl } = require('../adp-config');
+const { submitTaskUrl } = require('../../adp-config');
 
 const submit = async (result) => {
   try {

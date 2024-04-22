@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 jest.mock('axios');
 
-const fetcher = require('../../task-fetcher/task-fetcher');
+const fetcher = require('../../lib/services/taskFetcher');
 const { getTaskUrl } = require('../../adp-config');
 
 const mockedGetTask = {

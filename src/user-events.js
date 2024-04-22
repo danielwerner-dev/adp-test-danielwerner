@@ -1,6 +1,6 @@
-const fetcher = require('./task-fetcher/task-fetcher');
-const solver = require('./task-solver/task-solver');
-const submitter = require('./task-submitter/task-submitter');
+const fetcher = require('./lib/services/taskFetcher');
+const solver = require('./lib/services/taskSolver');
+const submitter = require('./lib/services/taskSubmitter');
 
 const setupFetchEvent = (socket) => {
   socket.on('fetch', () => {

@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 jest.mock('axios');
 
-const submitter = require('../../task-submitter/task-submitter');
+const submitter = require('../../lib/services/taskSubmitter');
 const { submitTaskUrl } = require('../../adp-config');
 
 const mockedSubmitResult = {

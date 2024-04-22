@@ -1,4 +1,4 @@
-const calculator = require('../../task-calculator/task-calculator');
+const calculator = require('../../lib/services/taskCalculator');
 
 test('Can calculate addition problems', () => {
   const operation = 'addition';

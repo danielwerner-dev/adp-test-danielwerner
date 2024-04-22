@@ -1,4 +1,4 @@
-const calculator = require('../task-calculator/task-calculator');
+const calculator = require('./taskCalculator');
 
 const solve = (problem) => {
   return {

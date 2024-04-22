@@ -1,4 +1,4 @@
-const solver = require('../../task-solver/task-solver');
+const solver = require('../../lib/services/taskSolver');
 
 test('Will return proper object for submission', () => {
   const problem = { id: '123', operation: 'division', left: -1, right: 1 };

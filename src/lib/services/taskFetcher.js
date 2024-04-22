@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const axios = require('axios');
-const { getTaskUrl } = require('../adp-config');
+const { getTaskUrl } = require('../../adp-config');
 
 async function fetch() {
   try {
