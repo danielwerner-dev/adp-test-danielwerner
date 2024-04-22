@@ -1,6 +1,6 @@
 # ADP Innovation Labs Pre-Interview Assignment
 
-Hello potential future coworker! :D
+Hello, potential future coworker! :D
 We're looking forward to having some great days working on creating new projects,
 debugging issues, planning applications, solving problems, and all of the other fun things we
 do here in Ventures Brazil Labs - together with you!
@@ -46,10 +46,10 @@ terminated
 
 # Bonus Criteria
 
-- While application is running, it gets and submits tasks continuously (without being a
+- While the application is running, it gets and submits tasks continuously (without being a
 DoS attack :))
-- Code is commented where appropriate
-Project is linted with common ESLint config (airbnb, standard) and contains a lint
+- Code is commented on where appropriate
+The project is linted with a common ESLint config (Airbnb, standard) and contains a lint
 script in package.json
 - unit tests / end-to-end tests are runnable via npm test command
 - Report any bugs or issues you find (there shouldn't be any, but who knows ;))
@@ -59,3 +59,11 @@ script in package.json
 - Explain how you would handle an alternative scenario where the application has a
 high number of submitted task requests, and occasionally, on demanding situations.
 the interview.adpeai.com API can respond with a 429 (Too Many requests).
+
+
+My approach:
+
+- I would implement a rate-limiting mechanism in the application to prevent overwhelming the API with too many requests. This can be done by keeping track of the number of requests made to the API within a certain time window and delaying or rejecting new requests if the limit is exceeded. We can choose between Leaky Bucket and Token Bucket, both have pros and cons
+- Thus, I'll choose TOKEN BUCKET because memory usage is minimal and if the bucket is full, tokens are discarded.
+- I'm not choosing LEAK BUCKET because may result in slowness for users (affecting application UI/UX), because requests are being throttled
+- Additionally, I would implement a retry mechanism to handle the 429 errors, helping to prevent the application from overwhelming the API with too many requests in a short period of time.
