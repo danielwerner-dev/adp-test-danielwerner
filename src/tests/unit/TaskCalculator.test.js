@@ -31,8 +31,8 @@ test('Can calculate division problems', () => {
 });
 test('Can calculate remainder problems', () => {
   const operation = 'remainder';
-  const left = 10;
-  const right = 2;
+  const left = 20;
+  const right = 4;
   const result = 0;
   expect(calculator[operation](left, right)).toBe(result);
 });
